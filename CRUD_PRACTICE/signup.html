@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원가입</title>
+    <script type="text/javascript">
+    function sign() {
+        var student_ID = document.getElementById("my_id");
+        var objPWD1 = document.getElementById("my_pwd1");
+        var objPWD2 = document.getElementById("my_pwd2");
+        var objName = document.getElementById("my_name");
+
+        //아이디와 패스워드 값 데이터 정규화 공식
+        var regul1 = /^[a-zA-Z0-9]{4,12}$/;
+        //이메일 값 데이터 유효성 체크
+        //[]안에 있는 값만 쓰겠다
+
+        //이름 정규화 공식
+        var regul2 = /^[가-힝a-zA-Z]{2,}$/;
+
+        //예외처리 
+        //아이디 입력 x
+        if ((student_ID.value) == ""){
+            alert("아이디를 입력하지 않았습니다.");
+            student_ID.focus();
+            return false;
+        }
+        //아이디 유효성 검사  ,  내가 입력한 데이터를 검사함 check() , 아이디 공식을 지키지 않으면 alert message를 띄움 
+        if (!check(regul1,student_ID,"아이디는 4~12자의 대소문자와 숫자로만 입력 가능합니다")) {
+            return false;
+        }
+        //비밀번호 입력 하지 않았을 경우
+        if ((objPwd1.value) == ""){
+            alert("비밀번호를 입력해 주세요");
+            objPwd1.focus();
+            return false;
+        }
+        if ((objPwd2.value=="")){
+            alert("비밀번호를 입력해 주세요");
+            objPwd2.focus();
+            return false;
+        }
+ 
+        //비밀번호 유효성 검사
+        //만약 내가 비밀번호에 정규화 방식을 하나라도 지키지 않으면 if문 안으로 들어가서 alert message를 띄움
+        if (!check(regul1,objPwd1,"비밀번호는 4~12자의 대소문자와 숫자로만 입력 가능합니다.")) {
+            return false;
+        }
+        
+        //비밀번호와 비밀번호 확인이 일치 하지 않을 경우
+        if ((objPwd1.value)!=(objPwd2.value)) {
+            alert("비밀번호가 일치 하지 않습니다.");
+            objPwd1.focus();
+            objPwd2.focus();
+            return false;
+        }
+    }
+    function check(re,what,message){
+        if (re.test(what.value)){
+            return true;
+        }
+        alert(message);
+        what.value = "";
+        what.focus();
+    }
+    </script>
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="styles/signup.css">
+</head>
+<body>
+<br><br><br><br><br><br>
+<!-- <header> 뒤로가기 버튼 실험  -->
+
+
+
+<form name="f" method="post" onsubmit="return sign()" action="http://localhost:3001/" enctype="text/plain" >
+    
+    <table width="600" height="700" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="white" style="border-top-left-radius: 3em; border-top-right-radius: 3em;"  >
+        <tr align="center" >
+            <td colspan="2" align="cener" bgcolor="#FFE4E1" style="border-top-left-radius: 3em; border-top-right-radius: 3em;">
+                <div style="font-weight: bold; font-size: 24px; ">회원 가입</div>
+            </td>
+        </tr>
+        <div class="abc">
+        <tr>
+            <td bgcolor="#FFF0F5" align="center">
+                <div style="font-weight: bold;">아이디:
+                </div></td>
+            <td>&nbsp<input type="text" name="my_id" id="my_id" size="12" maxlength="12" width="">
+                &nbsp4~12자의 영문 대소문자와 숫자로만 입력</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF0F5" align="center"><div style="font-weight: bold;">비밀번호:</div></td>
+
+            <td>&nbsp<input type="password" id="my_pwd" name="my_pwd" size="12" maxlength="12">
+            &nbsp4~12자의 영문 대소문자와 숫자로만 입력</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF0F5" align="center"><div style="font-weight: bold;">비밀번호 확인:</div></td>
+            <td>&nbsp<input type="password" id="my_pwd2" name="my_pwd2" size="12" maxlength="12"></td>
+        </tr>
+        <tr >
+            <td bgcolor="#FFF0F5" align="center" style="border-bottom-left-radius: 2em;"><div style="font-weight: bold; ">이름:</div></td>
+            <td style="border-bottom-right-radius: 2em;">&nbsp<input type="text" name="my_name" id="my_name" size="10" maxlength="10"></td>
+        </tr>
+        
+
+    </table>
+    </div>
+        <p align = "center">
+        <input type="submit" name="submit" value="회원 가입">
+        <input type="reset" value="다시 입력">
+        </p>
+</form>
+<footer>
+
+</footer>
+</body>
+</html>
