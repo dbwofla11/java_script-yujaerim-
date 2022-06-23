@@ -1,0 +1,162 @@
+
+@media screen and (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  button{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0 none;
+    border-radius: 3%;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: dodgerblue;
+  }
+  
+  button:hover{
+    background-color: rgb(255, 255, 255);
+    color: dodgerblue;
+  }
+  
+  ol,ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav{
+    background-color: deepskyblue;
+  }
+  
+  .header {
+    position: relative;
+  }
+  
+  .header .menu {
+    top: 10px;
+    right: 0;
+  }
+  
+ .header .link {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #efefef;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+    float: right;
+    text-decoration: none;
+    
+  }
+  
+  .nav-link:hover{
+    color: #fff;
+  }
+  /* 테이블 박스 css */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table td {
+    width: 25%;
+    height: 70px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 26px;
+  }
+  
+  table td:first-child {
+    width: 10%;
+  }
+  
+  .off td {
+    background: #eee;
+    color: #ccc;
+  }
+  
+  .list_box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .list_box li {
+    flex: 20% 0 0;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+#imgtitle {
+  width: 70%;
+  margin: 20px;
+  margin-left: 15%; 
+  font-size: large;
+  align-content: center;
+}
+
+#files{
+  margin-left: 15%;
+
+}
+
+#writepage{
+  background-color: rgba(230, 225, 225, 0.91);
+  padding: 0;
+  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.head{
+  margin-top: 0;
+  margin-left: 15%;
+  font-size: larger;
+  
+  
+}
+
+#submit{
+  float: right;
+}
+
+/* 이미지 미리보기 */
+#preview_image{
+  margin: 5%;
+  height: auto;
+  width: 90%;
+  margin-top: 0%;
+}
+.semple{
+  margin-left: 5%;
+  margin-top: -5%;
+  font-size: larger;
+}
