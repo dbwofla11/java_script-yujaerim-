@@ -20,21 +20,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));//이미지 업로드 처리 
 app.use(express.static(__dirname + '/css')); // public 디렉토리 접근 허용 
 app.use(express.static(__dirname + '/images'));
-app.use(fileUpload()); // 익스프레스 파일업로드 사용허가 
+app.use(fileUpload()); // 익스프레스 파일업로드 모듈 사용허가 
 // Note that this option available for versions 1.0.0 and newer. 
+app.use(express.static(__dirname + '/public'));
+//탬플릿 모아두는 곳 
 
-//ROUTES
-//home
-app.get('/' , function(req , res){
+//파일 localhost에 출력 
+app.get('/' , function(req , res){ //메인
     res.sendFile(__dirname + '/index.html');
 });
-app.get('/signup' , function(req , res){
+app.get('/signup' , function(req , res){ //회원가입 
     res.sendFile(__dirname + '/signup.html');
 });
-app.get('/write' , function(req , res){
+app.get('/write' , function(req , res){ //글쓰기 페이지 
     res.sendFile(__dirname + '/write.html');
 });
-app.get('/login' , function(req , res){
+app.get('/login' , function(req , res){ // 로그인 
     res.sendFile(__dirname + '/login.html');
 });
 
@@ -52,8 +53,6 @@ var port = 3030;
 app.listen(port, function(){
     console.log('서버가 켜졋습니다. http://localhost:' + port);
 });
-
-
 
 
 
