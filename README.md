@@ -21,5 +21,5 @@ git 명령어 써서는 따로 올릴거임
 
 
 
-<h1>react.js공부<h1>
+<h2>react.js공부<h2>
 <li>단어장 만들기 연습(클론코딩)https://www.youtube.com/watch?v=05uFo_-SGXU&list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-</li>
