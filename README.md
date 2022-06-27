@@ -18,3 +18,8 @@ git 명령어 써서는 따로 올릴거임
 <li>두번째 목표 : 메인페이지의 이미지요소 삭제하는 기능 만들기</li>
 <li>세번째 목표 : 메인페이지의 수정기능 추가</li>
 <li>마지막 목표 : heroku로 클라우딩 하기</li>
+
+
+
+<h1>react.js공부<h1>
+<li>단어장 만들기 연습(클론코딩)https://www.youtube.com/watch?v=05uFo_-SGXU&list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-</li>
