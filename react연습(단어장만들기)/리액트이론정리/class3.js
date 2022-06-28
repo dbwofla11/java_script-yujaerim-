@@ -6,7 +6,7 @@ export default function Hello(){
     function showage(age){
         console.log(age);
     }
-    return (
+    return ( 
     <div>
         <p>Hello</p>
         <button onClick={{showname}}>dbwofla</button>
