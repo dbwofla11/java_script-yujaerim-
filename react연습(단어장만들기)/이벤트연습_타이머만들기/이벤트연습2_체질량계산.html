@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('DOMContentLoaded' , function(){ // 이렇게 onload대신 이벤트리스너를 통해 이벤트처리를 할 수 있다. 
+            document.getElementById("button").onclick = function(){
+                var h = parseFloat(document.getElementById("h").value);
+                var w = parseFloat(document.getElementById("w").value);
+
+                var bmi = document.getElementById("bmi");
+                bmi.innerHTML = (w/h/h).toFixed(1);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>키: <input type="number" id = "h">m</p>
+    <p>몸무게: <input type="number" id = "w"></p>
+    <p>당신의 체질량지수는 <output id = "bmi">?</output></p>
+    <input type="button" id = "button" value="계산">
+</body>
+</html>
